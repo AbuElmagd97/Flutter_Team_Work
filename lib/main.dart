@@ -23,15 +23,16 @@ class MyHomePage extends StatelessWidget {
           color: Colors.white,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.yellow,
-            ),
+                color: Colors.white, // Heba => Update color of container
+              ),
               width: 200,
               height: 200,
               alignment: Alignment.center,
               child: Text(
-            "Hello Flutter!",
-            style: TextStyle(color: Colors.teal,fontSize: 25),
-          )),
+                //Todo: Change Text
+                "Hello Flutter!",
+                style: TextStyle(color: Colors.teal, fontSize: 25),
+              )),
         ),
       ),
     );
