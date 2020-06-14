@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
         child: Card(
           color: Colors.white,
           child: Container(
-            decoration: BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.white, // Heba => Update color of container
               ),
               width: 200,
@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 //Todo: Change Text
-                "Ay btengan :D!",
+                "Ay btengan :D!",  // Aya : I changed the text
                 style: TextStyle(color: Colors.teal, fontSize: 25),
               )),
         ),
