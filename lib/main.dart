@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 //Todo: Change Text
-                "Hello Flutter!",
+                "Ay btengan :D!",
                 style: TextStyle(color: Colors.teal, fontSize: 25),
               )),
         ),
