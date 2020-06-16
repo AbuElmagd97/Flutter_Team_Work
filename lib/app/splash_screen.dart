@@ -31,11 +31,10 @@ Widget _buildContent() {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height: 50.0),
           Image.asset(
             'images/coffee-cup.png',
-            width: 200,
-            height: 200,
+            width: 100,
+            height: 100,
           ),
           SizedBox(
             height: 20,
