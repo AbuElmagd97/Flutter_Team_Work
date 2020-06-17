@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/app/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildContent(),
+      body: _buildContent(context),
     );
   }
 }
 
-Widget _buildContent() {
+Widget _buildContent(BuildContext context) {
   return Stack(
     children: <Widget>[
       Container(
@@ -60,7 +61,15 @@ Widget _buildContent() {
         child: SizedBox(
           width: 150,
           child: RaisedButton(
-            onPressed: () {},
+            onPressed: () =>
+            {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+              ),
+            },
             color: Color(0xFF5C3015),
             child: Text(
               'Get Started',

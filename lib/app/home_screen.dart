@@ -5,12 +5,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildContent(),
+      body: _buildContent(context),
     );
   }
 }
 
-Widget _buildContent() {
+Widget _buildContent(BuildContext context) {
   return Stack(
     children: <Widget>[
       Container(
@@ -26,26 +26,49 @@ Widget _buildContent() {
           ),
         ),
       ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          SizedBox(),
-          Container(
-            width: 50,
-            height: 50,
-            child: ClipPolygon(
-              sides: 6,
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage('https://i.redd.it/6onq25y0sh311.jpg'),
+      Positioned(
+        right: 20,
+        left: 20,
+        top: 50,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              width: 50,
+              height: 50,
+              child: ClipPolygon(
+                sides: 6,
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image:
+                      NetworkImage('https://i.redd.it/6onq25y0sh311.jpg'),
+                    ),
                   ),
                 ),
               ),
             ),
+            Icon(Icons.search, color: Color(0xFFBC906A), size: 32.0),
+          ],
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.only(top: 140),
+        width: MediaQuery
+            .of(context)
+            .size
+            .width,
+        height: MediaQuery
+            .of(context)
+            .size
+            .height * 0.85,
+        decoration: BoxDecoration(
+          color: Color(0xFF5C3015),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
           ),
-          Icon(Icons.search, color: Color(0xFFBC906A), size: 32.0),
-        ],
+        ),
       ),
     ],
   );
