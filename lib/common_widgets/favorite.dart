@@ -6,7 +6,7 @@ class Favorite extends StatefulWidget {
 }
 
 class _FavoriteState extends State<Favorite> {
-  bool isClicked = false;
+  bool isClicked = true;
 
   @override
   Widget build(BuildContext context) {

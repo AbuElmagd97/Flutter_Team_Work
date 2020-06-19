@@ -18,11 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 Widget _buildContent(BuildContext context) {
-//  bool clicked = false;
-//  void favoriteClicked() {
-//    clicked = !clicked;
-//    Icon(clicked?Icons.favorite_border:Icons.favorite);
-//  }
+
 
   return Stack(
     children: <Widget>[
@@ -42,7 +38,7 @@ Widget _buildContent(BuildContext context) {
       Positioned(
         right: 20,
         left: 20,
-        top: 50,
+        top: 40,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -66,7 +62,7 @@ Widget _buildContent(BuildContext context) {
         ),
       ),
       Container(
-        margin: EdgeInsets.only(top: 140),
+        margin: EdgeInsets.only(top: 110),
         width: MediaQuery
             .of(context)
             .size
@@ -74,7 +70,7 @@ Widget _buildContent(BuildContext context) {
         height: MediaQuery
             .of(context)
             .size
-            .height * 0.85,
+            .height * 0.88,
         decoration: BoxDecoration(
           color: Color(0xFF5C3015),
           borderRadius: BorderRadius.only(
@@ -84,94 +80,114 @@ Widget _buildContent(BuildContext context) {
         ),
       ),
       Positioned(
-        top: 150,
+        top: 100,
         left: 30,
         right: 30,
         bottom: 20,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                CustomCard(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.4,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.35,
-                  borderRadius: 20,
-                  color: Color(0xFFBC906A),
-                  child: ItemCard(
-                    text: 'Chemex',
-                    assetName: 'images/chemex.png',
-                    price: '15\$',
-                    description: 'try coffe from kenya,Ethiopia',
-                  ),
-                ),
-                CustomCard(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.4,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.35,
-                  borderRadius: 20,
-                  color: Color(0xFFBC906A),
-                  child: ItemCard(
-                    text: 'French Press',
-                    assetName: 'images/french-press.png',
-                    price: '20\$',
-                    description: 'try coffe from sumatra,Mexico',
-                  ),
-                ),
-              ],
+            Text(
+              'Brewing Coffe',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  fontFamily: 'MuseoModerno'),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                CustomCard(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.4,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.35,
-                  borderRadius: 20,
-                  color: Color(0xFFBC906A),
-                  child: ItemCard(
-                    text: 'Latte',
-                    assetName: 'images/latte.png',
-                    price: '10\$',
-                    description: 'Espresso Steamed milk and thin of foam',
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    CustomCard(
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width * 0.4,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height * 0.35,
+                      borderRadius: 20,
+                      color: Color(0xFFBC906A),
+                      child: ItemCard(
+                        text: 'Chemex',
+                        assetName: 'images/chemex.png',
+                        price: '15\$',
+                        description: 'try coffe from kenya,Ethiopia',
+                      ),
+                    ),
+                    SizedBox(
+                        height: 30,
+                        child: Text('Espresso', style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.0,
+                            fontFamily: 'MuseoModerno'),)),
+                    CustomCard(
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width * 0.4,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height * 0.35,
+                      borderRadius: 20,
+                      color: Color(0xFFBC906A),
+                      child: ItemCard(
+                        text: 'French Press',
+                        assetName: 'images/french-press.png',
+                        price: '20\$',
+                        description: 'try coffe from sumatra,Mexico',
+                      ),
+                    ),
+                  ],
                 ),
-                CustomCard(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.4,
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.35,
-                  borderRadius: 20,
-                  color: Color(0xFFBC906A),
-                  child: ItemCard(
-                    text: 'Cappuccino',
-                    assetName: 'images/cappuccino.png',
-                    price: '8\$',
-                    description: 'Espresso Steamed milk and lots of foam',
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    CustomCard(
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width * 0.4,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height * 0.35,
+                      borderRadius: 20,
+                      color: Color(0xFFBC906A),
+                      child: ItemCard(
+                        text: 'Latte',
+                        assetName: 'images/latte.png',
+                        price: '10\$',
+                        description: 'Espresso Steamed milk and thin of foam',
+                      ),
+                    ),
+                    SizedBox(height: 30,),
+                    CustomCard(
+                      width: MediaQuery
+                          .of(context)
+                          .size
+                          .width * 0.4,
+                      height: MediaQuery
+                          .of(context)
+                          .size
+                          .height * 0.35,
+                      borderRadius: 20,
+                      color: Color(0xFFBC906A),
+                      child: ItemCard(
+                        text: 'Cappuccino',
+                        assetName: 'images/cappuccino.png',
+                        price: '8\$',
+                        description: 'Espresso Steamed milk and lots of foam',
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
