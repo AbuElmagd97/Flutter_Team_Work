@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/app/item_card.dart';
+import 'package:flutterapp/app/item_screen.dart';
 import 'package:flutterapp/common_widgets/custom_card.dart';
 import 'package:polygon_clipper/polygon_clipper.dart';
 
@@ -18,8 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 Widget _buildContent(BuildContext context) {
-
-
   return Stack(
     children: <Widget>[
       Container(
@@ -122,10 +121,13 @@ Widget _buildContent(BuildContext context) {
                     ),
                     SizedBox(
                         height: 30,
-                        child: Text('Espresso', style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18.0,
-                            fontFamily: 'MuseoModerno'),)),
+                        child: Text(
+                          'Espresso',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.0,
+                              fontFamily: 'MuseoModerno'),
+                        )),
                     CustomCard(
                       width: MediaQuery
                           .of(context)
@@ -161,14 +163,24 @@ Widget _buildContent(BuildContext context) {
                           .height * 0.35,
                       borderRadius: 20,
                       color: Color(0xFFBC906A),
-                      child: ItemCard(
-                        text: 'French Press',
-                        assetName: 'images/french-press.png',
-                        price: '20\$',
-                        description: 'try coffe from sumatra,Mexico',
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ItemScreen()));
+                        },
+                        child: ItemCard(
+                          text: 'French Press',
+                          assetName: 'images/french-press.png',
+                          price: '20\$',
+                          description: 'try coffe from sumatra,Mexico',
+                        ),
                       ),
                     ),
-                    SizedBox(height: 30,),
+                    SizedBox(
+                      height: 30,
+                    ),
                     CustomCard(
                       width: MediaQuery
                           .of(context)
