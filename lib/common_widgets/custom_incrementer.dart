@@ -11,7 +11,7 @@ class _CustomIncrementerState extends State<CustomIncrementer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 105,
+      width: 115,
       height: 40,
       decoration: BoxDecoration(
           color: Color(0xFF5C3015),
