@@ -8,6 +8,8 @@ class ItemScreen extends StatefulWidget {
 }
 
 class _ItemScreenState extends State<ItemScreen> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,19 +86,7 @@ class _ItemScreenState extends State<ItemScreen> {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  CustomIncrementer(),
-                  Text(
-                    '\$15',
-                    style: TextStyle(
-                        fontSize: 22.0,
-                        color: Color(0xFFBC906A),
-                        fontFamily: 'MuseoModerno'),
-                  ),
-                ],
-              ),
+              CustomIncrementer(),
               Container(
                 margin: EdgeInsets.only(top: 50),
                 height: 80,

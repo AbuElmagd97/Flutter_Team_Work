@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: ItemCard(
                           text: 'Chemex',
                           assetName: 'images/chemex.png',
-                          price: '15\$',
+                          price: '20\$',
                           description: 'try coffe from kenya,Ethiopia',
                         ),
                       ),
@@ -172,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ItemCard(
                             text: 'French Press',
                             assetName: 'images/french-press.png',
-                            price: '20\$',
+                            price: '15\$',
                             description: 'try coffe from sumatra,Mexico',
                           ),
                         ),
